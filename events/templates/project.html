@@ -15,14 +15,14 @@
         <div class="col-md-4">
         
           
-            <h5 style="color: black; font-family: 'ABeeZee', sans-serif;"> {{ project.average_design | floatformat }} average rating of design</h5>
-            <h5 style="color: black; font-family: 'ABeeZee', sans-serif;"> {{ project.average_content | floatformat }} average rating of content</h5>
-            <h5 style=" color: black;font-family: 'ABeeZee', sans-serif;"> {{ project.average_usability | floatformat }} average rating of usability</h5>
+            <h5 style="color: black; font-family: 'ABeeZee', sans-serif;"> {{ project.average_design | floatformat }} design rating</h5>
+            <h5 style="color: black; font-family: 'ABeeZee', sans-serif;"> {{ project.average_content | floatformat }} content rating</h5>
+            <h5 style=" color: black;font-family: 'ABeeZee', sans-serif;"> {{ project.average_usability | floatformat }} usability rating</h5>
 
 
             <hr>
 
-            <p class="home-list"> {{ratings|length}} reviews </p>
+            <p class="home-list"> {{ratings|length}} people have reviewed </p>
             <div class="reviews">
             {% for review in ratings %}
                 <div class="row">
