@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+    <div class="row" style="padding-top:50px;">
+        <div class="col-md-4">
+
+            <h2>{{ project.title }}</h2>
+            <hr>
+            <img src="{{project.image.url}}"  alt="{{project.title}}" height="350px" width="auto">
+            <hr>
+            <p>{{ project.description }}</p>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+        
+          
+            <h5 style="color: black; font-family: 'ABeeZee', sans-serif;"> {{ project.average_design | floatformat }} average rating of design</h5>
+            <h5 style="color: black; font-family: 'ABeeZee', sans-serif;"> {{ project.average_content | floatformat }} average rating of content</h5>
+            <h5 style=" color: black;font-family: 'ABeeZee', sans-serif;"> {{ project.average_usability | floatformat }} average rating of usability</h5>
+
+
+            <hr>
+
+            <p class="home-list"> {{ratings|length}} reviews </p>
+            <div class="reviews">
+            {% for review in ratings %}
+                <div class="row">
+                    <div class="col-md-10">
+                        <ul class="list-inline home-list">
+                            <li class="list-inline-item">
+                                <a href="{% url 'profile' project.owner.id%}">{{review.user.username}}</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <p>{{review.review}} </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="row">
+                    <div class="col-md-10">
+                        <h3>There are no reviews</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <form action="{% url 'project' project_id=project.id %}" method="POST">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="submit" class="btn btn-success" value="Update">
+            </form>
+
+
+        </div>
+       
+    </div>
+
+</div>
+
+
+{% endblock %}
