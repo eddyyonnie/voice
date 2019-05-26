@@ -33,10 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django_forms_bootstrap',
-    'tinymce',
-    'rest_framework',
-    'rest_framework.authtoken',
     'bootstrap3',
     'events',
     'django.contrib.admin',
@@ -83,8 +79,15 @@ WSGI_APPLICATION = 'eventerproj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.prostgresql',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'DB_NAME':'test',
+        'DB_USER':'moringa',
+        'DB_PASSWORD':'neurosurge0n',
+        'DB_HOST':'127.0.0.1',
+        'MODE':'dev',
+        'ALLOWED_HOSTS':'.localhost','.herokuapp.com','.127.0.0.1',
+
     }
 }
 
@@ -113,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
