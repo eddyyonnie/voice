@@ -6,37 +6,33 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
         <div class="card text-center">
-            <div class="card-header">
-        <h2>Log in to Sitexpo</h2>
+          <div class="card-header">
+        <h2>Sign up</h2>
         </div>
         <div class="card-body">
-        {% if form.errors %}
-          <p style="color: red">Your username and password didn't match. Please try again.</p>
-        {% endif %}
         <form method="post">
           {% csrf_token %}
-          <input type="hidden" name="next" value="{{ next }}" />
           {% for field in form %}
             <p>
               {{ field.label_tag }}<br>
-              {{ field }}<br>
+              {{ field }}
+              {% if field.help_text %}
+                <small style="color: grey">{{ field.help_text }}</small>
+              {% endif %}
               {% for error in field.errors %}
                 <p style="color: red">{{ error }}</p>
               {% endfor %}
-              {% if field.help_text %}
-                <p><small style="color: grey">{{ field.help_text }}</small></p>
-              {% endif %}
             </p>
           {% endfor %}
-        </div>
-        <div class="card-footer">
-          <button type="submit">Log in</button>
-          <h3>First experience is it?<a href="{% url 'signup' %}"> Sign up</a></h3>
-        </div>
+          </div>
+          <div class="card-footer">
+          <button type="submit">Sign up</button>
+          </div>
         </form>
-        </div>
+      </div>
     </div>
     <div class="col-md-4"></div>
   </div>
 </div>
+
 {% endblock %}

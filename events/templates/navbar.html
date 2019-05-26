@@ -63,7 +63,7 @@
         <a href="{%url 'myprofile'%}">Profile</a>
         <a href="{% url 'new-project' %}">Add Project</a>
         <a href="{% url 'edit_profile' %}">Edit Your Profile</a>
-        <a href="/logout">Logout</a>
+        <a href="{% url 'home' %}">Logout</a>
         {% else %}
         <a class='btn btn-default' href="{% url 'login' %}">Login</a>
         {% endif %}
