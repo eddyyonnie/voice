@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+  {% if projects%}
+<div class="row" style="padding-top:20px;">
+  {% for project in projects %}
+<div class="col-md-4">
+    <div class="card" >
+        <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title"><strong>{{project.title}}</strong></h3>
+          <p class="card-text"><a href="{% url 'profile' project.owner.id %}" style="font-size: 12px; color: grey; text-decoration: none;">{{ project.owner }}</a></p>
+          <a href="{% url 'project' project.id %}" class="btn btn-primary" >View details</a>
+          <a href="{{project.url}}" class="btn btn-primary" target="_blank">Visit site</a>
+        </div>
+      </div>
+</div>
+{% endfor %}
+</div>
+  {% else %}
+  <h1>No project on deck at the moment</h1>
+  <h2>Add your own <a href="{% url 'new-project' %}">here</a></h2>
+  {% endif %}
+</div>
+{% endblock %}
