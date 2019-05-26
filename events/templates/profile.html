@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">{% extends 'base.html' %}
-    {% load static %}
-    {% block content %}
     <div class="container">
         <div class="row" style="padding-top:20px;">
             <div class="col-md-4">
@@ -29,7 +26,7 @@
       {% for project in projects %}
     <div class="col-md-4">
         <div class="card" >
-            <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
+            <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap" height=200>
             <div class="card-body">
               <h3 class="card-title"><strong>{{project.title}}</strong></h3>
               <a href="{{project.url}}" class="btn btn-primary" target="_blank">Visit site</a>
@@ -43,44 +40,4 @@
       <h2>Add your own <a href="{% url 'new-project' %}">here</a></h2>
       {% endif %}
     </div>
-    {% endblock %}
-    <div class="row" style="padding-top:20px;">
-        <div class="col-md-4">
-          {% if user.profile.avatar %}
-          <img src="{{ user.profile.avatar.url }}" alt="profile picture" style="width: 250px;height:250px; border-radius:50%">
-          {% else %}
-          <img src="{% static 'image/empty.png' %}" alt="profile picture" style="width: 250px;height:250px; border-radius:50%">
-          {% endif %}
-        </div>
-        <div class="col-md-4">
-            <h3><strong>Username:</strong>{{ user.username}}</h3><br>
-            <p><strong>bio:</strong>{{user.profile.bio}}</p>
-            <p><strong>email:</strong>{{ user.email }}</p>
-        </div>
-        <div class="col-md-4">
-
-        </div>
-       
-</div>
-<hr>
-  {% if projects%}
-<div class="row" style="padding-top:10px;">
-  {% for project in projects %}
-<div class="col-md-4">
-    <div class="card" >
-        <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
-        <div class="card-body">
-          <h3 class="card-title"><strong>{{project.title}}</strong></h3>
-          <!-- <p class="card-text">{{project.description}}</p> -->
-          <a href="{{project.url}}" class="btn btn-primary" target="_blank">Visit site</a>
-        </div>
-      </div>
-</div>
-{% endfor %}
-</div>
-  {% else %}
-  <h1>No project on deck at the moment</h1>
-  <h2>Add your own <a href="{% url 'new-project' %}">here</a></h2>
-  {% endif %}
-</div>
 {% endblock %}
