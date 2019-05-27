@@ -1,24 +1,24 @@
-# Instagram
+# Events
 ## Description
-* A clone for the instagram global app to approve mastery of procedural innovations.
+* A platform for submitting as well as viewing projects recently uploaded to the site with a privilege of also posting a project to be reviewed.
 
 # User stories :
     * As a user, I would like to concider being authenticaticated.
     * As a user, I would like to get authenticated on login click.
     * As a user, I would like to log in.
     * As a user, I would like to create profile.
-    * As a user, I would like to post videos.
-    * As a user, I would like to post images.
-    * As a user, I would like to view followers.
-    * As a user, I would like to view following and their post with profile page.
+    * As a user, I would like to post projects.
+    * As a user, I would like to view projects.
+    * As a user, I would like to view post details.
+    * As a user, I would like to view home page with submitted projects.
 
 
 ## Behavior Driven Development
-| Input               | Behaviour                         | Output                        |
+| Input               | Behaviour                         | Output                     |
 | ------------------- | ------------------ | ------------------------------------------|
-| Photo inputed       | landing page loads | Displays available categories of images   |
-| Click on post       | Post  loads        | All images and videos from post gets displayed|
-
+|  click login        | input credentials  | Displays available  projects              |
+| Click on post       | Post  loads        | All projects from post gets displayed     |
+| click logout        | prompted to login  | Login as another user                     |
 
 ## Technologies Used
     - Python 3.6
