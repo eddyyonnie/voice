@@ -22,7 +22,7 @@
 
 ## Technologies Used
     - Python 3.6
-    - Flask Framework
+    - Django Framework
     - HTML, CSS and Bootstrap
     - JavaScript
     - Git
@@ -32,11 +32,8 @@
     1. Clone or download the Repo
     2. Create a virtual environment
     3. Read the specs and requirements files and Install all the requirements.
-    4. Run ./start.py
+    4. Run server under mamage.py file
     5. Access the application through `localhost:8000`
-
-# Link to live site
-    
 
 ## Known bugs
 * No  known bugs.
