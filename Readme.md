@@ -21,7 +21,7 @@
 | click logout        | prompted to login  | Login as another user                     |
 
 ## Technologies Used
-    - Python 3.6
+    - Python 3.6.7
     - Django Framework
     - HTML, CSS and Bootstrap
     - JavaScript
