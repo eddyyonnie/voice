@@ -3,12 +3,13 @@
 
 {% block content %}
 <div class="container">
+    <p style="font-size:30PX;margin-left:30%;margin-right:30%;color:white;">THE SUPER PLATFORM FOR SUBMITTING AND VIEWING DONE PROJECTS</p>
   {% if projects%}
 <div class="row" style="padding-top:20px;">
   {% for project in projects %}
-<div class="col-md-4">
+<div class="col-md-6">
     <div class="card" >
-        <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap" height=200>
+        <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap" height=150>
         <div class="card-body">
           <h3 class="card-title"><strong>{{project.title}}</strong></h3>
           <p class="card-text"><a href="{% url 'profile' project.owner.id %}" style="font-size: 12px; color: grey; text-decoration: none;">{{ project.owner }}</a></p>
@@ -20,6 +21,7 @@
 {% endfor %}
 </div>
   {% else %}
+  <h1></h1>
   <h1>No project on deck at the moment</h1>
   <h2>Add your own <a href="{% url 'new-project' %}">here</a></h2>
   {% endif %}
