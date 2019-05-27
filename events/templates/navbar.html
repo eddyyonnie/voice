@@ -58,7 +58,7 @@
     
       
       <div id="navbar">
-        <a class="active" href="{% url 'home'%}">Home</a>
+        <a class="danger" href="{% url 'home'%}">Home</a>
         <a class="danger" href="{% url 'signup' %}">Logout</a>
         {% if user.is_authenticated %}
         <a href="{%url 'myprofile'%}">Profile</a>
