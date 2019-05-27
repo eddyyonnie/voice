@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container">
     <div style = "background-image: url('');background-repeat:no-repeat;background-size:cover;">
-    <p style="font-size:30PX;margin-left:30%;margin-right:30%;color:white;">THE SUPER PLATFORM FOR SUBMITTING AND VIEWING DONE PROJECTS</p>
+    <p style="font-size:30PX;margin-left:10%;margin-right:10%;color:white;">THE SUPER PLATFORM FOR SUBMITTING AND VIEWING DONE PROJECTS</p>
     
     </div>
   {% if projects%}
@@ -15,7 +15,7 @@
         <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap" height=150>
         <div class="card-body">
           <h3 class="card-title"><strong>{{project.title}}</strong></h3>
-          <p class="card-text"><a href="{% url 'profile' project.owner.id %}" style="font-size: 12px; color: grey; text-decoration: none;">{{ project.owner }}</a></p>
+          <p class="card-text"><a href="{% url 'profile' project.owner.id %}" style="font-size: 12px; color:white; text-decoration: none;">{{ project.owner }}</a></p>
           <a href="{% url 'project' project.id %}" class="btn btn-primary" >View details</a>
           <a href="{{project.url}}" class="btn btn-primary" target="_blank">Visit site</a>
         </div>
@@ -26,10 +26,20 @@
   {% else %}
   <h1></h1>
   <h1>No project on deck at the moment</h1>
+  <img src="https://media2.giphy.com/media/pPhyAv5t9V8djyRFJH/200.webp?cid=790b76115ceb961643573463499bc973&rid=200.webp" width=500>
   <h2>Add your own <a href="{% url 'new-project' %}">here</a></h2>
   {% endif %}
-  <div style="background-color:blueviolet;">
+</div>
+  <div style="background-color:white;text-align:center;">
+    <p style="color:silver;">We are yours for the taking.For more contacct us on</p>
+    <br>
+    
+    <a href="https://twitter.com/login"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxANDRAQDQ8QEA8NDg8QDQ8NDg8PDQ0NFRYWFxURFRYYHCggGBolGxUVIT0hJSksLi46Fx8/ODM4QygtLisBCgoKDg0OFQ8PFSsZFRkrKzc3LTcrLSsrKysrKysrKysrKy0tKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABQYCBwMECAH/xABLEAACAQECBwkLCAkFAQAAAAAAAQIDBBEFBhITFCExFUFRUmFxkZKhB1RjcnOBk7HB0dIiMjRCYqKy0xYkM1OClKOz8SNEwuHwQ//EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8A3iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOt+F4UW4pZc1tUWlGL+1Le5tb5CJqYwV7/kqjFcDjUn23x9QFnBVN37R4D0VT8wfpBaPAeiqfmAWsFU/SC0+A9FU/MPn6Q2jwHoqn5gFsBUnjFaPAeiqfmHx4yWjwHoqn5gFuBT3jNaPAeiqfmGLxptHBR9FU/MAuQKW8bK/BR9FU+MweN9fgo+iqfGBdwUZ45V+LR9HU+MweOtfi0fR1PjAvgKD+nNdP5lFrgyakb/PlO7oJXBOO9CtONO0R0ec2owlKSnZ5yeyKncrn4yV+9eBaQAAAAAAAAAAAAAAACPw1bHRp3Rd06jai9+MfrS83raJArmMredhwKnq88tf4UBDt9H/u0xuMmYso+HwNlbnXtWE7Q7PYL4wi7qlX/sCwSqxW2UU+Vo+OR9sncuo3X2ivUnN7WpPafbViTWsac7FWlUjHXKhVd+UuR7zA4pSOOUjjhVylfc09jT1OL30z5JhH2UzilI+SkcUpAJSOKUxJnDJlH2UzhlMSOOQGMpHDUaaaavTVzT1prgM5HHJAXrudYwym3Yq8nKVOOVZ5yd8pUuI3vtbL+C4vpo7A1Z0bfZpx1XTyXyptK7tN4Jk1X0AEAAAAAAAAAAACAxlj8qD4YtdD/wCyfITGRfs/4vYBANGLRytGDRURmHqrp2ao1tyWi04hYIjZLDT1f6lVZdSW+29ZVsYF+rT5n6mbBwM/1Wj5KHqGq7gAIKXjVY40q+VFXKrfJ3cZXXkDIteOcf2T8f8A4lXlEqOCRxSR2JROOUSjryRxSR2XA46iUVe2kuUDrSRxuIq2uK+anLsR1KlpqPZdHmV77QOw4nBOpCO2UenWdWcJS+c2+dsx0cqO5YKsZ2qjku+6cHsa+vBe03pDYuZGicE0sm00/Gp/3IG9obFzIzq4yABFAAAAAAAAAAAIbD+twXAm+n/BMkPhT5Va7gpQfTKfuAhnTMHTJF0T46JpFZxljdZZvkfqZfcC/RaPkoeopWOcMmw1HyxXS7i7YG+i0fJQ9RNV3AAQVDHunar6UrPTzsEmpQjG+eU3t2rVcVJyt/eVTqL4jbgLRqLJt7/2dTqL4j5m7f3nU6q+I28BRp6pQwg9lkqLmpxb/EdSeD7ZffOy1ny5tX/iN2AUjSVOje8mcXCXFkmn2nNoXIbVwvgala4NTilL6k0rpRfCU6nYWr4yXyoSlCXjRd1/tLmorehcg0LkLNoPINB5Coq9OhkV6PLUpr78GbnhsXMjVeGaObrWT7Vogu2/2G1IbFzIzq4yABFAAAAAAAAAAAIissq21FwWazvpnX9xLkVS14SrrgsVjf8AUtXuA5MwfMwd/IGQWild0Snk4MqPwlFdM4otmB/o1HyUfUVzuoRuwTV8rZv7sCx4H+jUfJR9RB3AAAAAAAAAAAK/o2XVryWyVeV38MYRl96MuglLRa3JunQulV2SlthQ+1Pl+ztfNe1yWeyxpwjCOyKuveuTe/Jvfbd784EToXINC5CazSGaRajXuOlHN1cH/atqX3JP2GxIbFzIo3dKjk1cFcuELv6VQvMNi5kNVkACAAAAAAAAAAABDxldhKu+GxWP+7aiYIS1PJt1R8Nlsy6J1/eBJ54Z4j8+M+IiF7pk8rBNZeEs76KsCzYG+i0fJQ9RUcf6mVgyuvJvonFlswE77JQ8lD1BXeAAEJaEp22rCeU4ws1mlFKpUgk5Trpu6LWv5K6DPQ6XBP8AmK/xnXt8si3VHxrNZ+ydb3nzSBEdnQ6Xhf5q0/GNDpeF/mrV8Z1tIGkFg7Oh0uCo+e0Wh+uY0Ohv0ovx75es62kDSBBJ06ihFRgoxitkYpRilyJGekETpA0gQqW0gaQROkDSBCoDui1Mqrgvkwhf/SqF+hsXMjXOOk8urg77NtT+5Je02NDYuZEVkAAAAAAAAAAAAAEHhfVXyuGlTXRKfvJwgsY5ZMoPhTXR/kuDqZ0OqdDPnXr2veT5yowxleeslaC34O7laLdixUU7DZ2v3UfUU2dZNNPfVxYsR6/6vKi9tGTyfEete1eYmmLIACKrmNkXSdO0JXwgnTr3b1NtOM/M195kbC0KSTTvT2NbC5VaanFxkk4yVzT2NFIwniZXpycrBWyYt35ubdy5i5qRzZ4Z4h5YCwwv3b/iXuMdx8McSHXj8JaRNZ4Z4hdx8McSHXXwnzc7C8dtGEuacfcKRN54Z4h4WmvTeTaqMqUt5v5r5mdjSCokM8M8R+kDSAOpjE8qrY/s2qL9ntNmw2LmRqzCc8qpZ+StB/eijacNi5kZ1cZAAigAAAAAAAAAAFZx0q5Ko8rqf8SzFJ7o1bJdBclR+oYIStbslcr2HT0vlISrbcp336t7mMNJ5TSJ3SyVxbwqqNoV71S1NcZb659/p4Sm6TyhWq7Y9my560wN8wkpJNO9NXprfRkUTEzG2M0qFeV0vqt7Jc3u/wDK9J361sZlX0AAAAAAAHXttjhXg4VEmnse/F8KNbYXpOy15U3va4+L/lM2iaq7oVti7e4xf7OnGMvG1v2lxNdbSxpZBaTyjSeUomXWyq1FeEp/3IG4IbFzI0Zg+vlWmkvtw/HA3nDYuZE1cZAAgAAAAAAAAAAAaz7r1dwnZ1vShLX59fsNmFH7rGBZ2qwqtRi5VLHJzyYq+UqTXy0uXUn5gNSaQNIIpWi/Wmfc+aRKaQNIIvPjPgSqtN2+W7Fzug1rLdCv/rU1wv5aXOa8z4z5B6FwXjrYbSldWVOT+rU1a+cnKVrpz1wqQl4s4v1Hl9WjlOanhOrH5tSa5pMQen7xeeZ1h60LZXn1g8PWh/8A3n1hFemMpcK6TGdaMfnSiueSR5n3ctH76fWZjPDFaWp1qjXjsQbyxqx0s9jpSjSnGpXaajGDvUXws03aLdKrOU5u+U25Sb32yIdov2u/nPmfCJTSBpBF58O0Xb5RYMB1sq20I8NSP4k/YehobFzI0P3LMEztlvjWaebo/KvezVsN8k1QAEAAAAAAAAAAAD5JXq57HtPoA1Ljx3LXUqTtGDGoObcp0H+zct9x4DW1qxcwhRlkzss71vx1o9RmMoJ7UnzpMDyxuPbe9anYNx7b3rU7D1NmY8WPVQzMeLHqotHlnce2961Owbj23vWp2HqbMx4seqhmY8WPVQo8s7j23vWp2Dce2961Ow9TZmPFj1UMzHix6qFHlnce2961Owbj23vWp2HqbMx4seqhmY8WPVQo8s7j23vWp2Dce2961Ow9TZmPFj1UMzHix6qFHlnce2961Owbj23vWp2HqbMx4seqhmY8WPVQo8srA1uepWWp5yyYu9zi22ycXXjm6d+u/Urvaegs1Hix6qM0iURWLmAqWDqCpUV40t+TJUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k="height = 120></a>
+    <a href="https://en-gb.facebook.com/login/"><img src="https://classicalacademicpress.com/wp-content/uploads/2016/03/099412-glossy-silver-icon-soci.png" height = 120></a>
+    <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIf9hme3MdHKQelwNaU5T5gh_KUfjiDVdsZADA2Vy2kaKLbYnj" height = 120></a>
+    <a href="https://www.messenger.com/login.php"><img src="http://bookkeeping4solutions.com.au/wp-content/uploads/2018/03/envelope-square-mail-silver-icon-button.png" height = 120></a>
+    <a href="https://github.com/"><img src="http://www.iconninja.com/files/870/467/690/internet-github-social-media-connection-communication-network-icon.png" height = 120></a>
 
   </div>
-</div>
+
 {% endblock %}
