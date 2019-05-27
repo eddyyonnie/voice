@@ -1,1 +1,1 @@
-web: gunicorn eventorproj.wsgi --log-file -
+web: gunicorn eventerproj.wsgi --log-file -
