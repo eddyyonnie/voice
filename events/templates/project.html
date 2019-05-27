@@ -15,21 +15,21 @@
         <div class="col-md-4">
         
           
-            <h5 style="color: black; font-family: 'ABeeZee', sans-serif;"> {{ project.average_design | floatformat }} design rating</h5>
-            <h5 style="color: black; font-family: 'ABeeZee', sans-serif;"> {{ project.average_content | floatformat }} content rating</h5>
-            <h5 style=" color: black;font-family: 'ABeeZee', sans-serif;"> {{ project.average_usability | floatformat }} usability rating</h5>
+            <h5 style="color: silver; font-family: 'ABeeZee', sans-serif;"> {{ project.average_design | floatformat }} design rating</h5>
+            <h5 style="color: silver; font-family: 'ABeeZee', sans-serif;"> {{ project.average_content | floatformat }} content rating</h5>
+            <h5 style=" color: silver;font-family: 'ABeeZee', sans-serif;"> {{ project.average_usability | floatformat }} usability rating</h5>
 
 
             <hr>
 
-            <p class="home-list"> {{ratings|length}} people have reviewed </p>
+            <p class="home-list"> reviewed by {{ratings|length}} </p>
             <div class="reviews">
             {% for review in ratings %}
                 <div class="row">
                     <div class="col-md-10">
                         <ul class="list-inline home-list">
                             <li class="list-inline-item">
-                                <a href="{% url 'profile' project.owner.id%}">{{review.user.username}}</a>
+                                <a href="{% url 'profile' project.owner.id%}">{{review.user.username}}:</a>
                             </li>
                             <li class="list-inline-item">
                                 <p>{{review.review}} </p>
