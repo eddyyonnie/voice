@@ -11,11 +11,13 @@
               {% endif %}
             </div>
             <div class="col-md-4">
-                <h3><strong>User:</strong>{{ user.username}}</h3><br>
+                <h3><strong>Use
+                  
+                  0r:</strong>{{ user.username}}</h3><br>
                 <p><strong>bio:</strong>{{user.profile.bio}}</p>
                 <p><strong>email:</strong>{{ user.email }}</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4">    
     
             </div>
            
@@ -29,14 +31,13 @@
             <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap" height=200>
             <div class="card-body">
               <h3 class="card-title"><strong>{{project.title}}</strong></h3>
-              <a href="{{project.url}}" class="btn btn-primary" target="_blank">Visit site</a>
             </div>
           </div>
     </div>
     {% endfor %}
     </div>
       {% else %}
-      <h1>No project on deck at the moment</h1>
+      <h1>Any issues you would like to air? </h1>
       <img src="https://media2.giphy.com/media/pPhyAv5t9V8djyRFJH/200.webp?cid=790b76115ceb961643573463499bc973&rid=200.webp" width=500>
       <h2>Add your own <a href="{% url 'new-project' %}">here</a></h2>
       {% endif %}
