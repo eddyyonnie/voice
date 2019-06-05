@@ -164,4 +164,7 @@ class ProjectList(APIView):
       serializers = ProjectSerializer(all_projects, many=True)
       return Response(serializers.data)
 
+def Alerts(request):
+    return render(request, 'events/templates/Alerts.html', {})
+
 
