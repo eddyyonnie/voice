@@ -1,23 +1,22 @@
-# Events
+# Neighbourhood
 ## Description
-* A platform for submitting as well as viewing projects recently uploaded to the site with a privilege of also posting a project to be reviewed.
+* A platform for submitting as well as viewing issues concerning the neighbourhood recently uploaded to the site with a privilege of also posting an issue to be reviewed.
 
 # User stories :
     * As a user, I would like to concider being authenticaticated.
     * As a user, I would like to get authenticated on login click.
     * As a user, I would like to log in.
     * As a user, I would like to create profile.
-    * As a user, I would like to post projects.
-    * As a user, I would like to view projects.
-    * As a user, I would like to view post details.
-    * As a user, I would like to view home page with submitted projects.
+    * As a user, I would like to post issues to addressed.
+    * As a user, I would like to view issues recently posted.
+    
 
 
 ## Behavior Driven Development
 | Input               | Behaviour                         | Output                     |
 | ------------------- | ------------------ | ------------------------------------------|
 |  click login        | input credentials  | Displays available  projects              |
-| Click on post       | Post  loads        | All projects from post gets displayed     |
+| Add burning issue   | issue posted to home page | All issues available for everyone to seeat home page  |
 | click logout        | prompted to login  | Login as another user                     |
 
 ## Technologies Used
