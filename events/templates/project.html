@@ -23,7 +23,7 @@
                                 <a href="{% url 'profile' project.owner.id%}">{{review.user.username}}:</a>
                             </li>
                             <li class="list-inline-item">
-                                <p>{{review.review}} </p>
+                                <p>-{{review.review}} </p>
                             </li>
                         </ul>
                     </div>
@@ -31,7 +31,7 @@
                 {% empty %}
                 <div class="row">
                     <div class="col-md-10">
-                        <h3>There are no reviews</h3>
+                        <h3>There are {{reviews|length}} reviews</h3>
                     </div>
                 </div>
                 {% endfor %}

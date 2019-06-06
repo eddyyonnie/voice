@@ -69,7 +69,7 @@ class NewProjectForm(forms.ModelForm):
 
     class Meta:
         model = Project
-        fields = ['image','title','description','url']
+        fields = ['image','title','description']
 
 # class ReviewForm(forms.ModelForm):
 #     '''
@@ -87,4 +87,4 @@ class RatingForm(forms.ModelForm):
  
     class Meta:
         model = Ratings
-        fields = ['usability','design','content', 'review']
+        fields = [ 'review']

@@ -13,12 +13,6 @@
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-4">
-        
-          
-
-
-
-
             <hr>
 
             <p class="home-list"> reviewed by {{ratings|length}} </p>
@@ -39,7 +33,7 @@
                 {% empty %}
                 <div class="row">
                     <div class="col-md-10">
-                        <h3>There are no reviews</h3>
+                        <h3>There are {{reviews|length}} reviews</h3>
                     </div>
                 </div>
                 {% endfor %}

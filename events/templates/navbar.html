@@ -123,15 +123,15 @@
         <a href="{%url 'myprofile'%}" style="color:silver">Profile</a>
         <a href="{% url 'new-project' %}" style="color:silver"> Burning issue</a>
         <a href="{% url 'edit_profile' %}" style="color:silver">Edit Your Profile</a>
-        <a href="{% url 'edit_profile' %}" style="color:silver">Technicallities</a>
-        <a href="categories.html" style="color:silver">Categories</a>
+        <a href="{% url 'new-project' %}" style="color:silver">Technicallities</a>
+      
         
         {% else %}
         <a class='btn btn-default' href="{% url 'login' %}" style="color:silver">Login</a>
         {% endif %}
 
         <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" style="float:right">
-            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search Categories" aria-label="Search" style="color:black">
+            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search user profile" aria-label="Search" style="color:black">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color:black">Search</button>
           
 

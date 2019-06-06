@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <h1>{{projects|length}} number of projects found </h1>
+    <h1>{{projects|length}} issues addressed by yours truely at the moment.You are advised to be open in this platform .Proceed to home page and check out what we have to offer based on your posts. </h1>
 
 <div class="row">
     {% for project in projects %}
@@ -12,7 +12,7 @@
                   <h3 class="card-title"><strong>{{project.title}}</strong></h3>
                   <p class="card-text"><a href="{% url 'profile' project.owner.id %}" style="font-size: 12px; color: silver; text-decoration: none;">{{ project.owner }}</a></p>
                   <a href="{% url 'project' project.id %}" class="btn btn-primary" >View details</a>
-                  <a href="{{project.url}}" class="btn btn-primary" target="_blank">Visit site</a>
+                  
                 </div>
               </div>
         </div>
