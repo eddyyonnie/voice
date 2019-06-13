@@ -13,7 +13,8 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
-
+#login settings
+LOGIN_REDIRECT_URL='/'
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)

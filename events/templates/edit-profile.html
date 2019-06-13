@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{%load bootstrap3%}
 {% block content %}
 
 
@@ -8,13 +8,13 @@
       
       <div class="update-form">
 
-         <form action="" method="post" enctype="multipart/form-data">
+         <form action="/edit/" method="post" enctype="multipart/form-data">
             <div class="legend">
                <h5>Edit Profile</h5>
             </div>
             {% csrf_token %}
-            {{ user_form.as_p }}
-            {{ form.as_p }}
+          
+            {%bootstrap_form form%}
             <button type="submit" class="btn">Submit</button>
          </form>
       </div>

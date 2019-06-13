@@ -79,32 +79,33 @@ def own_profile(request):
    profile = Profile.objects.all()
    return render(request, 'profile.html', {'projects':projects,'profile':profile, "user":user, "current_user":request.user })
 
-@login_required
+@login_required(login_url='/accounts/login/')
 def edit_profile(request):
 
    user = request.user
 
    if request.method == 'POST':
-      form = ProfileUpdateForm(request.POST,request.FILES,instance=user.profile)
-      user_form = UserUpdateForm(request.POST,instance=user)
-      if user_form.is_valid() and form.is_valid():
-         user_form.save()
+      instance=Profile.objects.get(user=user)
+      form = ProfileUpdateForm(request.POST,request.FILES,instance=instance)
+      # user_form = UserUpdateForm(request.POST)
+      if form.is_valid():
+         # user_form.save()
          profile = form.save(commit=False)
          profile.user = user
          profile.save()
          messages.info(request, 'You\'ve successfully updated your account!')
-         return redirect('home')
+      return redirect('home')
    else:
       form = ProfileUpdateForm(instance=request.user)
-      user_form = UserUpdateForm(instance=request.user.profile)
+      # user_form = UserUpdateForm(instance=request.user.profile)
 
-   context = { 
-      'user': user,
-      'user_form': user_form,
-      'form': form
-   }
+   # context = { 
+   #    'user': user,
+   #    'user_form': user_form,
+   #    'form': form
+   # }
 
-   return render(request, 'edit-profile.html', context)
+   return render(request, 'edit-profile.html', {'form':form})
 
 
 @login_required

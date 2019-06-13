@@ -5,7 +5,7 @@ from django.dispatch import receiver
 import numpy as np
 
 class Profile(models.Model):
-    avatar = models.ImageField( blank=True ,upload_to='avatar/')
+    avatar = models.ImageField(default='empty.png',blank=True ,upload_to='avatar/')
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, blank=True)
 

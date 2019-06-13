@@ -1,0 +1,18 @@
+{%extends 'registration/base.html'%}
+{%load bootstrap3%}
+{%block content%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+                <form action="/accounts/register/" method="post" style="color:white;">
+  
+                        {%csrf_token%}
+                        {%bootstrap_form form%}
+                        <button type="submit" class=" btn btn-info btn-sm">register</button>
+                    </form>
+        </div>
+    </div>
+
+    </div>
+{%endblock%}

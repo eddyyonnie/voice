@@ -16,11 +16,15 @@
   {% endblock %}
 
 </head>
-<body>
- {% block content %} <h1 class='text-center'></h1> {%endblock%}
+<body style="background-image: url('https://cdn.wallpapersafari.com/6/6/fqKNEx.jpg'); background-size :cover;background-position-y: fixed;">
+  {% include "navbar.html" %}
+
+
+  {% block content %} <h1 class='text-center'></h1> {%endblock%}
+
 {% block scripts %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- {% bootstrap_javascript %}
+{% bootstrap_javascript %}
 {% endblock %}
 </body>
 </html>
