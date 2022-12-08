@@ -1,5 +1,5 @@
 bootstrap4==0.0.5
-certifi==2018.11.29
+certifi==2022.12.7
 chardet==3.0.4
 config==0.3.9
 confusable-homoglyphs==3.2.0
